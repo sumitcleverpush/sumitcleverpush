@@ -27,9 +27,14 @@ let package = Package(
             ],
             resources: [
                 .process("CleverPush/Source/Resource"),
-                .copy("CleverPush/README.md"),
+                .process("CleverPush/Resources"),
             ],
-            publicHeadersPath: "CleverPush/Source/include"),
+            publicHeadersPath: "CleverPush/Source/include",
+            cSettings: [
+                .headerSearchPath("./"),
+                .headerSearchPath("CleverPush/Source"),
+                .headerSearchPath("CleverPushLocation/Source"),
+            ]),
 //        .testTarget(
 //            name: "CleverPushTests",
 //            dependencies: ["CleverPush"],
