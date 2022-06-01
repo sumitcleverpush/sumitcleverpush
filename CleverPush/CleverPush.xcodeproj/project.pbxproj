@@ -803,30 +803,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		18E8714C28353825002FD590 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				CB1B65CC27577B6E0087AC49 /* CleverPushTests */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		18E871ED28353FA4002FD590 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				184566B52844AAFB00DA0295 /* CleverPush */,
-				1845676A2844AAFB00DA0295 /* CleverPushLocation */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		297B4DEB1E589AFE00BAF990 = {
 			isa = PBXGroup;
 			children = (
 				297C34CF23FB70E300314A84 /* CHANGELOG.md */,
 				297B4E351E58A1AA00BAF990 /* CleverPush.podspec */,
-				18E871ED28353FA4002FD590 /* Sources */,
-				18E8714C28353825002FD590 /* Tests */,
+				CB1B65CC27577B6E0087AC49 /* CleverPushTests */,
+				1845676A2844AAFB00DA0295 /* CleverPushLocation */,
+				184566B52844AAFB00DA0295 /* CleverPush */,
 				297B4DF61E589AFE00BAF990 /* Products */,
 				29C1BAF01E58B89500815CD6 /* Frameworks */,
 			);

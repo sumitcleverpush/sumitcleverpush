@@ -21,14 +21,15 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "CleverPush",
+            path: "CleverPush",
             exclude: [
                 
             ],
             resources: [
-                .process("Source/Resource"),
-                .copy("../../README.md"),
+                .process("CleverPush/Source/Resource"),
+                .copy("CleverPush/README.md"),
             ],
-            publicHeadersPath: "Source/include"),
+            publicHeadersPath: "CleverPush/Source/include"),
 //        .testTarget(
 //            name: "CleverPushTests",
 //            dependencies: ["CleverPush"],
