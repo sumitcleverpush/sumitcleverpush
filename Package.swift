@@ -31,7 +31,6 @@ let package = Package(
             ],
             publicHeadersPath: "CleverPush/Source/include",
             cSettings: [
-                .headerSearchPath("./"),
                 .headerSearchPath("CleverPush/Source"),
                 .headerSearchPath("CleverPushLocation/Source"),
             ]),
