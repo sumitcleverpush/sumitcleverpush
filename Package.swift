@@ -5,7 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "CleverPush",
-    defaultLocalization: "en",
+    platforms: [
+        .iOS(.v9)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -21,18 +23,29 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "CleverPush",
-            path: "CleverPush",
+            path: "CleverPush/CleverPush",
             exclude: [
-                
+                "Info.plist",
+                "Framework"
             ],
             resources: [
-                .process("CleverPush/Source/Resource"),
-                .process("CleverPush/Resources"),
+                .process("Source/Resource"),
+                .process("Resources"),
             ],
-            publicHeadersPath: "CleverPush/Source/include",
+            publicHeadersPath: "include",
             cSettings: [
-                .headerSearchPath("CleverPush/Source"),
-                .headerSearchPath("CleverPushLocation/Source"),
+                .headerSearchPath("Source"),
+//                .headerSearchPath("CleverPushLocation/Source"),
+            ],
+            linkerSettings: [
+                .linkedFramework("SystemConfiguration"),
+                .linkedFramework("UIKit"),
+                .linkedFramework("UserNotifications"),
+                .linkedFramework("StoreKit"),
+                .linkedFramework("WebKit"),
+                .linkedFramework("JavaScriptCore"),
+                .linkedFramework("SafariServices"),
+
             ]),
 //        .testTarget(
 //            name: "CleverPushTests",

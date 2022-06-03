@@ -12,6 +12,18 @@
 #import <UIKit/UIKit.h>
 
 #import "CleverPush.h"
+#import "CPChatView.h"
+#import "CPStoryView.h"
+#import "CPNotificationViewController.h"
+#import "CleverPushHTTPClient.h"
+#import "CPAppBannerAction.h"
+#import "CPNotification.h"
+#import "CPSubscription.h"
+#import "CPChannelTag.h"
+#import "CPChannelTopic.h"
+#import "CleverPushInstance.h"
+#import "CPInboxView.h"
+#import "CleverPushUserDefaults.h"
 #import "UNUserNotificationCenter+CleverPush.h"
 #import "UIApplicationDelegate+CleverPush.h"
 #import "CleverPushSelectorHelpers.h"

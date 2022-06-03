@@ -7,19 +7,49 @@
 #define XC8_AVAILABLE 1
 #import <UserNotifications/UserNotifications.h>
 #endif
-
-#import "CPChatView.h"
-#import "CPStoryView.h"
-#import "CPNotificationViewController.h"
+//#import "CleverPush.h"
+//#import "CPChatView.h"
+//#import "CPStoryView.h"
+//#import "CPNotificationViewController.h"
 #import "CleverPushHTTPClient.h"
-#import "CPAppBannerAction.h"
-#import "CPNotification.h"
-#import "CPSubscription.h"
-#import "CPChannelTag.h"
-#import "CPChannelTopic.h"
-#import "CleverPushInstance.h"
-#import "CPInboxView.h"
+//#import "CPAppBannerAction.h"
+//#import "CPNotification.h"
+//#import "CPSubscription.h"
+//#import "CPChannelTag.h"
+//#import "CPChannelTopic.h"
+//#import "CleverPushInstance.h"
+//#import "CPInboxView.h"
 #import "CleverPushUserDefaults.h"
+
+@class CPStoryView;
+@class CPChatView;
+@class CPNotificationViewController;
+@class CleverPushHTTPClient;
+@class CPAppBannerAction;
+@class CPNotification;
+@class CPSubscription;
+@class CPChannelTag;
+@class CPChannelTopic;
+@class CleverPushInstance;
+@class CPInboxView;
+@class CleverPushUserDefaults;
+@class CPNotificationReceivedResult;
+@class CPNotificationOpenedResult;
+@class CPWidgetModule;
+
+
+typedef void (^CPResultSuccessBlock)(NSDictionary* result);
+typedef void (^CPFailureBlock)(NSError* error);
+
+typedef void (^CPHandleSubscribedBlock)(NSString * result);
+
+typedef void (^CPHandleNotificationReceivedBlock)(CPNotificationReceivedResult* result);
+typedef void (^CPHandleNotificationOpenedBlock)(CPNotificationOpenedResult* result);
+
+typedef void (^CPResultSuccessBlock)(NSDictionary* result);
+typedef void (^CPFailureBlock)(NSError* error);
+
+typedef void (^CPAppBannerActionBlock)(CPAppBannerAction* action);
 
 @interface CleverPush : NSObject
 
