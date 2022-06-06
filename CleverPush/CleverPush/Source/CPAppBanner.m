@@ -120,6 +120,11 @@
         if ([[json objectForKey:@"carouselEnabled"] isEqual:[NSNumber numberWithBool:true]]) {
             self.carouselEnabled = YES;
         }
+        
+        self.multipleScreensEnabled = NO;
+        if ([[json objectForKey:@"enableMultipleScreens"] isEqual:[NSNumber numberWithBool:true]]) {
+            self.multipleScreensEnabled = YES;
+        }
 
         self.marginEnabled = YES;
         if ([json objectForKey:@"marginEnabled"] != nil && ![[json objectForKey:@"marginEnabled"] isKindOfClass:[NSNull class]] && [[json objectForKey:@"marginEnabled"] boolValue]) {

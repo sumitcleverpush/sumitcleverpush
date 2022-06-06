@@ -1,1 +1,1 @@
-/Users/apple/Desktop/cleverpush-ios-sdk/CleverPush/Sources/CleverPush/Source/CleverPush.h
+../Source/CleverPush.h

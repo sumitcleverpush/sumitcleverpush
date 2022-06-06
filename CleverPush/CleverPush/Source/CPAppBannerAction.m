@@ -17,7 +17,9 @@
         if ([json objectForKey:@"type"] && [[json objectForKey:@"type"] isKindOfClass:[NSString class]]) {
             self.type = [json objectForKey:@"type"];
         }
-        
+        if ([json objectForKey:@"screen"] && [[json objectForKey:@"screen"] isKindOfClass:[NSString class]]) {
+            self.screen = [json objectForKey:@"screen"];
+        }
         if ([json objectForKey:@"name"] && [[json objectForKey:@"name"] isKindOfClass:[NSString class]]) {
             self.name = [json objectForKey:@"name"];
         }
@@ -30,6 +32,11 @@
         self.openInWebview = NO;
         if ([json objectForKey:@"openInWebview"] != nil && ![[json objectForKey:@"openInWebview"] isKindOfClass:[NSNull class]] && [[json objectForKey:@"openInWebview"] boolValue]) {
             self.openInWebview = YES;
+        }
+        
+        self.openBySystem = NO;
+        if ([json objectForKey:@"openBySystem"] != nil && ![[json objectForKey:@"openBySystem"] isKindOfClass:[NSNull class]] && [[json objectForKey:@"openBySystem"] boolValue]) {
+            self.openBySystem = YES;
         }
         
         if ([json objectForKey:@"tags"] && [[json objectForKey:@"tags"] isKindOfClass:[NSArray class]]) {

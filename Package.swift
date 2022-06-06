@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "CleverPush",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v9)
     ],
@@ -25,17 +26,15 @@ let package = Package(
             name: "CleverPush",
             path: "CleverPush/CleverPush",
             exclude: [
-                "Info.plist",
-                "Framework"
+                "Info.plist"
             ],
             resources: [
-                .process("Source/Resource"),
                 .process("Resources"),
             ],
             publicHeadersPath: "include",
             cSettings: [
                 .headerSearchPath("Source"),
-//                .headerSearchPath("CleverPushLocation/Source"),
+                .headerSearchPath("Source/DWAlertController"),
             ],
             linkerSettings: [
                 .linkedFramework("SystemConfiguration"),
