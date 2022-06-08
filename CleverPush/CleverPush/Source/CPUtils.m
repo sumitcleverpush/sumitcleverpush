@@ -493,8 +493,10 @@ NSString * const localeIdentifier = @"en_US_POSIX";
     NSBundle *sourceBundle = [NSBundle bundleForClass:[self class]];
     NSBundle *bundle = [NSBundle bundleWithPath:[mainBundle pathForResource:@"CleverPushResources" ofType:@"bundle"]];
     bundle = bundle ? : [NSBundle bundleWithPath:[sourceBundle pathForResource:@"CleverPushResources" ofType:@"bundle"]];
+    bundle = bundle ? : [NSBundle bundleWithPath:[mainBundle pathForResource:@"CleverPush_CleverPush" ofType:@"bundle"]];
     return bundle ? : sourceBundle;
 }
+
 
 #pragma mark - time ago string based on the current time.
 + (NSString *)timeAgoStringFromDate:(NSDate *)date {
